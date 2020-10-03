@@ -35,7 +35,7 @@ Configure the API to handle to the following routes:
 
 #### Endpoint Specifications
 
-When the client makes a `POST` request to `/api/posts`:
+<!-- When the client makes a `POST` request to `/api/posts`:
 
 - If the request body is missing the `title` or `contents` property:
 
@@ -52,7 +52,7 @@ When the client makes a `POST` request to `/api/posts`:
 - If there's an error while saving the _post_:
   - cancel the request.
   - respond with HTTP status code `500` (Server Error).
-  - return the following JSON object: `{ error: "There was an error while saving the post to the database" }`.
+  - return the following JSON object: `{ error: "There was an error while saving the post to the database" }`. -->
 
 When the client makes a `POST` request to `/api/posts/:id/comments`:
 
@@ -78,14 +78,16 @@ When the client makes a `POST` request to `/api/posts/:id/comments`:
   - respond with HTTP status code `500` (Server Error).
   - return the following JSON object: `{ error: "There was an error while saving the comment to the database" }`.
 
-When the client makes a `GET` request to `/api/posts`:
+<!-- When the client makes a `GET` request to `/api/posts`:
 
 - If there's an error in retrieving the _posts_ from the database:
   - cancel the request.
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ error: "The posts information could not be retrieved." }`.
 
-When the client makes a `GET` request to `/api/posts/:id`:
+ -->
+
+<!-- When the client makes a `GET` request to `/api/posts/:id`:
 
 - If the _post_ with the specified `id` is not found:
 
@@ -95,8 +97,9 @@ When the client makes a `GET` request to `/api/posts/:id`:
 - If there's an error in retrieving the _post_ from the database:
   - cancel the request.
   - respond with HTTP status code `500`.
-  - return the following JSON object: `{ error: "The post information could not be retrieved." }`.
+  - return the following JSON object: `{ error: "The post information could not be retrieved." }`. -->
 
+<!--
 When the client makes a `GET` request to `/api/posts/:id/comments`:
 
 - If the _post_ with the specified `id` is not found:
@@ -107,9 +110,9 @@ When the client makes a `GET` request to `/api/posts/:id/comments`:
 - If there's an error in retrieving the _comments_ from the database:
   - cancel the request.
   - respond with HTTP status code `500`.
-  - return the following JSON object: `{ error: "The comments information could not be retrieved." }`.
+  - return the following JSON object: `{ error: "The comments information could not be retrieved." }`. -->
 
-When the client makes a `DELETE` request to `/api/posts/:id`:
+<!-- When the client makes a `DELETE` request to `/api/posts/:id`:
 
 - If the _post_ with the specified `id` is not found:
 
@@ -119,7 +122,7 @@ When the client makes a `DELETE` request to `/api/posts/:id`:
 - If there's an error in removing the _post_ from the database:
   - cancel the request.
   - respond with HTTP status code `500`.
-  - return the following JSON object: `{ error: "The post could not be removed" }`.
+  - return the following JSON object: `{ error: "The post could not be removed" }`. -->
 
 When the client makes a `PUT` request to `/api/posts/:id`:
 
@@ -145,7 +148,7 @@ When the client makes a `PUT` request to `/api/posts/:id`:
   - update the post document in the database using the new information sent in the `request body`.
   - return HTTP status code `200` (OK).
   - return the newly updated _post_.
-  
+
 ### Database Persistence Helpers
 
 The `data` folder contains a database populated with test `posts`.
@@ -208,4 +211,4 @@ Create a new React application and connect it to your server:
 
 Follow these steps for completing your project.
 
-- [ ] Submit a pull request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a pull request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
